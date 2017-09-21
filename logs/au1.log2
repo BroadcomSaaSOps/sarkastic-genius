@@ -1,0 +1,162 @@
+2017-09-22 07:24:16,225 p=24230 u=root |  PLAY [sc5,mun,au1] ************************************************************************************************************************************************************************************************************
+2017-09-22 07:24:16,226 p=24230 u=root |  skipping: no hosts matched
+2017-09-22 07:24:16,228 p=24230 u=root |  PLAY [sc5,mun,au1] ************************************************************************************************************************************************************************************************************
+2017-09-22 07:24:16,228 p=24230 u=root |  skipping: no hosts matched
+2017-09-22 07:24:16,228 p=24230 u=root |  PLAY RECAP ********************************************************************************************************************************************************************************************************************
+2017-09-22 07:24:16,228 p=24230 u=root |  Friday 22 September 2017  07:24:16 +1000 (0:00:00.073)       0:00:00.073 ******
+2017-09-22 07:24:16,228 p=24230 u=root |  ===============================================================================
+2017-09-22 07:24:45,785 p=24242 u=root |  PLAY [sc5,mun,au1] ************************************************************************************************************************************************************************************************************
+2017-09-22 07:24:45,834 p=24242 u=root |  TASK [Check /etc/passwd for clarity1] *****************************************************************************************************************************************************************************************
+2017-09-22 07:24:45,834 p=24242 u=root |  Friday 22 September 2017  07:24:45 +1000 (0:00:00.110)       0:00:00.111 ******
+2017-09-22 07:24:46,603 p=24242 u=root |  fatal: [au1jump01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname au1jump01: Name or service not known\r\n", "unreachable": true}
+2017-09-22 07:24:46,614 p=24242 u=root |  fatal: [AU1OEM01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname AU1OEM01: Name or service not known\r\n", "unreachable": true}
+2017-09-22 07:24:46,614 p=24242 u=root |  fatal: [AU1OEM02]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname AU1OEM02: Name or service not known\r\n", "unreachable": true}
+2017-09-22 07:24:46,615 p=24242 u=root |  fatal: [AU1DBORPOD01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname AU1DBORPOD01: Name or service not known\r\n", "unreachable": true}
+2017-09-22 07:24:47,575 p=24242 u=root |  changed: [AU1BKP004]
+2017-09-22 07:24:47,751 p=24242 u=root |  fatal: [AU1TOOLS001]: FAILED! => {"changed": false, "failed": true, "msg": "Error: ansible requires the stdlib json or simplejson module, neither was found!"}
+2017-09-22 07:24:47,783 p=24242 u=root |  fatal: [AU1TOOLS002]: FAILED! => {"changed": false, "failed": true, "msg": "Error: ansible requires the stdlib json or simplejson module, neither was found!"}
+2017-09-22 07:24:47,831 p=24242 u=root |  changed: [AU1IPWATCHD01]
+2017-09-22 07:24:47,899 p=24242 u=root |  changed: [AU1SFTPMGMT01]
+2017-09-22 07:24:48,168 p=24242 u=root |  changed: [au1infst01]
+2017-09-22 07:24:48,204 p=24242 u=root |  changed: [AU1KITS01]
+2017-09-22 07:24:48,420 p=24242 u=root |  changed: [AU1LOG001]
+2017-09-22 07:24:49,120 p=24242 u=root |  changed: [AU1REPO01]
+2017-09-22 07:24:52,365 p=24242 u=root |  changed: [AU1NWBKP01]
+2017-09-22 07:24:53,616 p=24242 u=root |  fatal: [AU1FTP002]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Connection timed out during banner exchange\r\n", "unreachable": true}
+2017-09-22 07:24:53,633 p=24242 u=root |  fatal: [AU1APP309]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Connection timed out during banner exchange\r\n", "unreachable": true}
+2017-09-22 07:24:53,644 p=24242 u=root |  fatal: [AU1AUTO002]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Connection timed out during banner exchange\r\n", "unreachable": true}
+2017-09-22 07:24:53,649 p=24242 u=root |  fatal: [AU1SWAT001]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Connection timed out during banner exchange\r\n", "unreachable": true}
+2017-09-22 07:24:53,650 p=24242 u=root |  fatal: [AU1FTP001]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Connection timed out during banner exchange\r\n", "unreachable": true}
+2017-09-22 07:24:53,659 p=24242 u=root |  TASK [Get value from misconfigured servers] ***********************************************************************************************************************************************************************************
+2017-09-22 07:24:53,659 p=24242 u=root |  Friday 22 September 2017  07:24:53 +1000 (0:00:07.824)       0:00:07.935 ******
+2017-09-22 07:24:54,858 p=24242 u=root |  fatal: [au1infst01]: FAILED! => {"changed": false, "cmd": "grep '^clarity1' /etc/passwd", "delta": "0:00:00.003532", "end": "2017-09-21 17:24:54.837942", "failed": true, "rc": 1, "start": "2017-09-21 17:24:54.834410", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-09-22 07:24:54,858 p=24242 u=root |  ...ignoring
+2017-09-22 07:24:54,991 p=24242 u=root |  fatal: [AU1REPO01]: FAILED! => {"changed": false, "cmd": "grep '^clarity1' /etc/passwd", "delta": "0:00:00.002737", "end": "2017-09-22 07:24:54.973144", "failed": true, "rc": 1, "start": "2017-09-22 07:24:54.970407", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-09-22 07:24:54,992 p=24242 u=root |  ...ignoring
+2017-09-22 07:24:55,102 p=24242 u=root |  fatal: [AU1NWBKP01]: FAILED! => {"changed": false, "cmd": "grep '^clarity1' /etc/passwd", "delta": "0:00:00.006225", "end": "2017-09-21 17:23:59.294915", "failed": true, "rc": 1, "start": "2017-09-21 17:23:59.288690", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-09-22 07:24:55,102 p=24242 u=root |  ...ignoring
+2017-09-22 07:24:55,105 p=24242 u=root |  fatal: [AU1IPWATCHD01]: FAILED! => {"changed": false, "cmd": "grep '^clarity1' /etc/passwd", "delta": "0:00:00.006162", "end": "2017-09-22 07:24:55.068311", "failed": true, "rc": 1, "start": "2017-09-22 07:24:55.062149", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-09-22 07:24:55,105 p=24242 u=root |  ...ignoring
+2017-09-22 07:24:55,108 p=24242 u=root |  fatal: [AU1LOG001]: FAILED! => {"changed": false, "cmd": "grep '^clarity1' /etc/passwd", "delta": "0:00:00.006775", "end": "2017-09-22 07:24:55.063187", "failed": true, "rc": 1, "start": "2017-09-22 07:24:55.056412", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-09-22 07:24:55,108 p=24242 u=root |  ...ignoring
+2017-09-22 07:24:55,957 p=24242 u=root |  ok: [AU1BKP004]
+2017-09-22 07:24:56,136 p=24242 u=root |  ok: [AU1SFTPMGMT01]
+2017-09-22 07:24:56,138 p=24242 u=root |  fatal: [AU1KITS01]: FAILED! => {"changed": false, "cmd": "grep '^clarity1' /etc/passwd", "delta": "0:00:01.007990", "end": "2017-09-21 17:24:56.079929", "failed": true, "rc": 1, "start": "2017-09-21 17:24:55.071939", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-09-22 07:24:56,139 p=24242 u=root |  ...ignoring
+2017-09-22 07:24:56,152 p=24242 u=root |  TASK [debug] ******************************************************************************************************************************************************************************************************************
+2017-09-22 07:24:56,153 p=24242 u=root |  Friday 22 September 2017  07:24:56 +1000 (0:00:02.493)       0:00:10.428 ******
+2017-09-22 07:24:56,444 p=24242 u=root |  ok: [AU1IPWATCHD01] => {
+    "value.stdout_lines": []
+}
+2017-09-22 07:24:56,519 p=24242 u=root |  ok: [AU1BKP004] => {
+    "value.stdout_lines": [
+        "clarity1:x:601:277874338::/home/clarity1:/bin/bash"
+    ]
+}
+2017-09-22 07:24:56,534 p=24242 u=root |  ok: [AU1KITS01] => {
+    "value.stdout_lines": []
+}
+2017-09-22 07:24:56,558 p=24242 u=root |  ok: [AU1LOG001] => {
+    "value.stdout_lines": []
+}
+2017-09-22 07:24:56,611 p=24242 u=root |  ok: [AU1NWBKP01] => {
+    "value.stdout_lines": []
+}
+2017-09-22 07:24:56,649 p=24242 u=root |  ok: [AU1REPO01] => {
+    "value.stdout_lines": []
+}
+2017-09-22 07:24:56,675 p=24242 u=root |  ok: [AU1SFTPMGMT01] => {
+    "value.stdout_lines": [
+        "clarity1:x:601:277874338::/home/clarity1:/bin/bash"
+    ]
+}
+2017-09-22 07:24:56,686 p=24242 u=root |  ok: [au1infst01] => {
+    "value.stdout_lines": []
+}
+2017-09-22 07:24:56,695 p=24242 u=root |  PLAY [sc5,mun,au1] ************************************************************************************************************************************************************************************************************
+2017-09-22 07:24:56,700 p=24242 u=root |  TASK [Check /etc/group for od_app_clarity] ************************************************************************************************************************************************************************************
+2017-09-22 07:24:56,700 p=24242 u=root |  Friday 22 September 2017  07:24:56 +1000 (0:00:00.547)       0:00:10.976 ******
+2017-09-22 07:24:57,417 p=24242 u=root |  changed: [AU1BKP004]
+2017-09-22 07:24:57,495 p=24242 u=root |  changed: [AU1KITS01]
+2017-09-22 07:24:57,513 p=24242 u=root |  changed: [au1infst01]
+2017-09-22 07:24:57,553 p=24242 u=root |  changed: [AU1IPWATCHD01]
+2017-09-22 07:24:57,602 p=24242 u=root |  changed: [AU1LOG001]
+2017-09-22 07:24:57,634 p=24242 u=root |  changed: [AU1NWBKP01]
+2017-09-22 07:24:57,701 p=24242 u=root |  changed: [AU1REPO01]
+2017-09-22 07:24:57,717 p=24242 u=root |  changed: [AU1SFTPMGMT01]
+2017-09-22 07:24:57,728 p=24242 u=root |  TASK [Get value from misconfigured servers] ***********************************************************************************************************************************************************************************
+2017-09-22 07:24:57,728 p=24242 u=root |  Friday 22 September 2017  07:24:57 +1000 (0:00:01.027)       0:00:12.004 ******
+2017-09-22 07:24:58,770 p=24242 u=root |  ok: [AU1BKP004]
+2017-09-22 07:24:58,925 p=24242 u=root |  fatal: [au1infst01]: FAILED! => {"changed": false, "cmd": "grep od_app_clarity /etc/group", "delta": "0:00:00.003351", "end": "2017-09-21 17:24:58.904378", "failed": true, "rc": 1, "start": "2017-09-21 17:24:58.901027", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-09-22 07:24:58,925 p=24242 u=root |  ...ignoring
+2017-09-22 07:24:58,938 p=24242 u=root |  fatal: [AU1IPWATCHD01]: FAILED! => {"changed": false, "cmd": "grep od_app_clarity /etc/group", "delta": "0:00:00.006030", "end": "2017-09-22 07:24:58.909381", "failed": true, "rc": 1, "start": "2017-09-22 07:24:58.903351", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-09-22 07:24:58,938 p=24242 u=root |  ...ignoring
+2017-09-22 07:24:58,981 p=24242 u=root |  fatal: [AU1KITS01]: FAILED! => {"changed": false, "cmd": "grep od_app_clarity /etc/group", "delta": "0:00:00.007257", "end": "2017-09-21 17:24:58.954945", "failed": true, "rc": 1, "start": "2017-09-21 17:24:58.947688", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-09-22 07:24:58,981 p=24242 u=root |  ...ignoring
+2017-09-22 07:24:59,063 p=24242 u=root |  fatal: [AU1LOG001]: FAILED! => {"changed": false, "cmd": "grep od_app_clarity /etc/group", "delta": "0:00:00.006500", "end": "2017-09-22 07:24:59.019861", "failed": true, "rc": 1, "start": "2017-09-22 07:24:59.013361", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-09-22 07:24:59,063 p=24242 u=root |  ...ignoring
+2017-09-22 07:24:59,089 p=24242 u=root |  fatal: [AU1NWBKP01]: FAILED! => {"changed": false, "cmd": "grep od_app_clarity /etc/group", "delta": "0:00:00.006136", "end": "2017-09-21 17:24:03.287651", "failed": true, "rc": 1, "start": "2017-09-21 17:24:03.281515", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-09-22 07:24:59,089 p=24242 u=root |  ...ignoring
+2017-09-22 07:24:59,119 p=24242 u=root |  ok: [AU1SFTPMGMT01]
+2017-09-22 07:24:59,127 p=24242 u=root |  fatal: [AU1REPO01]: FAILED! => {"changed": false, "cmd": "grep od_app_clarity /etc/group", "delta": "0:00:00.002541", "end": "2017-09-22 07:24:59.099428", "failed": true, "rc": 1, "start": "2017-09-22 07:24:59.096887", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-09-22 07:24:59,127 p=24242 u=root |  ...ignoring
+2017-09-22 07:24:59,131 p=24242 u=root |  TASK [debug] ******************************************************************************************************************************************************************************************************************
+2017-09-22 07:24:59,131 p=24242 u=root |  Friday 22 September 2017  07:24:59 +1000 (0:00:01.403)       0:00:13.407 ******
+2017-09-22 07:24:59,252 p=24242 u=root |  ok: [AU1BKP004] => {
+    "value.stdout_lines": [
+        "od_app_clarity:x:277874338:"
+    ]
+}
+2017-09-22 07:24:59,296 p=24242 u=root |  ok: [AU1KITS01] => {
+    "value.stdout_lines": []
+}
+2017-09-22 07:24:59,297 p=24242 u=root |  ok: [AU1IPWATCHD01] => {
+    "value.stdout_lines": []
+}
+2017-09-22 07:24:59,307 p=24242 u=root |  ok: [AU1LOG001] => {
+    "value.stdout_lines": []
+}
+2017-09-22 07:24:59,318 p=24242 u=root |  ok: [AU1NWBKP01] => {
+    "value.stdout_lines": []
+}
+2017-09-22 07:24:59,341 p=24242 u=root |  ok: [AU1REPO01] => {
+    "value.stdout_lines": []
+}
+2017-09-22 07:24:59,350 p=24242 u=root |  ok: [AU1SFTPMGMT01] => {
+    "value.stdout_lines": [
+        "od_app_clarity:x:277874338:"
+    ]
+}
+2017-09-22 07:24:59,356 p=24242 u=root |  ok: [au1infst01] => {
+    "value.stdout_lines": []
+}
+2017-09-22 07:24:59,359 p=24242 u=root |        to retry, use: --limit @/root/scripts/ansible/sarkastic-genius/site.retry
+
+2017-09-22 07:24:59,359 p=24242 u=root |  PLAY RECAP ********************************************************************************************************************************************************************************************************************
+2017-09-22 07:24:59,360 p=24242 u=root |  AU1APP309                  : ok=0    changed=0    unreachable=1    failed=0
+2017-09-22 07:24:59,360 p=24242 u=root |  AU1AUTO002                 : ok=0    changed=0    unreachable=1    failed=0
+2017-09-22 07:24:59,360 p=24242 u=root |  AU1BKP004                  : ok=6    changed=2    unreachable=0    failed=0
+2017-09-22 07:24:59,360 p=24242 u=root |  AU1DBORPOD01               : ok=0    changed=0    unreachable=1    failed=0
+2017-09-22 07:24:59,360 p=24242 u=root |  AU1FTP001                  : ok=0    changed=0    unreachable=1    failed=0
+2017-09-22 07:24:59,361 p=24242 u=root |  AU1FTP002                  : ok=0    changed=0    unreachable=1    failed=0
+2017-09-22 07:24:59,361 p=24242 u=root |  AU1IPWATCHD01              : ok=6    changed=2    unreachable=0    failed=0
+2017-09-22 07:24:59,361 p=24242 u=root |  AU1KITS01                  : ok=6    changed=2    unreachable=0    failed=0
+2017-09-22 07:24:59,361 p=24242 u=root |  AU1LOG001                  : ok=6    changed=2    unreachable=0    failed=0
+2017-09-22 07:24:59,361 p=24242 u=root |  AU1NWBKP01                 : ok=6    changed=2    unreachable=0    failed=0
+2017-09-22 07:24:59,361 p=24242 u=root |  AU1OEM01                   : ok=0    changed=0    unreachable=1    failed=0
+2017-09-22 07:24:59,361 p=24242 u=root |  AU1OEM02                   : ok=0    changed=0    unreachable=1    failed=0
+2017-09-22 07:24:59,362 p=24242 u=root |  AU1REPO01                  : ok=6    changed=2    unreachable=0    failed=0
+2017-09-22 07:24:59,362 p=24242 u=root |  AU1SFTPMGMT01              : ok=6    changed=2    unreachable=0    failed=0
+2017-09-22 07:24:59,362 p=24242 u=root |  AU1SWAT001                 : ok=0    changed=0    unreachable=1    failed=0
+2017-09-22 07:24:59,362 p=24242 u=root |  AU1TOOLS001                : ok=0    changed=0    unreachable=0    failed=1
+2017-09-22 07:24:59,362 p=24242 u=root |  AU1TOOLS002                : ok=0    changed=0    unreachable=0    failed=1
+2017-09-22 07:24:59,362 p=24242 u=root |  au1infst01                 : ok=6    changed=2    unreachable=0    failed=0
+2017-09-22 07:24:59,363 p=24242 u=root |  au1jump01                  : ok=0    changed=0    unreachable=1    failed=0
+2017-09-22 07:24:59,363 p=24242 u=root |  Friday 22 September 2017  07:24:59 +1000 (0:00:00.231)       0:00:13.639 ******
+2017-09-22 07:24:59,363 p=24242 u=root |  ===============================================================================
+2017-09-22 07:24:59,363 p=24242 u=root |  Check /etc/passwd for clarity1 ------------------------------------------ 7.83s
+2017-09-22 07:24:59,363 p=24242 u=root |  Get value from misconfigured servers ------------------------------------ 2.49s
+2017-09-22 07:24:59,363 p=24242 u=root |  Get value from misconfigured servers ------------------------------------ 1.40s
+2017-09-22 07:24:59,364 p=24242 u=root |  Check /etc/group for od_app_clarity ------------------------------------- 1.03s
+2017-09-22 07:24:59,364 p=24242 u=root |  debug ------------------------------------------------------------------- 0.55s
+2017-09-22 07:24:59,364 p=24242 u=root |  debug ------------------------------------------------------------------- 0.23s

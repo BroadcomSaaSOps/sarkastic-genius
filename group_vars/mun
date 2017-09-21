@@ -1,0 +1,4 @@
+---
+osconfig_etcpasswd_string: 'clarity1:x:601:263723754::/fs0/clarity1:/bin/bash'
+osconfig_etcgroup_string: 'app^chsadmins:x:263723754:clarity1'
+...

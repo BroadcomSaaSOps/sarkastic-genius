@@ -7,7 +7,7 @@
       #path: /etc/passwd
       dest: /etc/passwd
       regexp: '^clarity1'
-      line: 'clarity1:x:601:2069365905::/fs0/clarity1:/bin/bash'
+      line: '{{ osconfig_etcpasswd_string }}'
       backup: yes
     register: result
 #    check_mode: yes
@@ -31,7 +31,7 @@
       #path: /etc/group
       dest: /etc/group
       regexp: '^od_app_clarity'
-      line: 'od_app_clarity:x:2069365905:'
+      line: '{{ osconfig_etcgroup_string }}'
       backup: yes
     register: result
 #    check_mode: yes

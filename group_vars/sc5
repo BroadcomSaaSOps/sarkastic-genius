@@ -1,4 +1,5 @@
 ---
 osconfig_etcpasswd_string: 'clarity1:x:601:2069365905::/fs0/clarity1:/bin/bash'
-osconfig_etcgroup_string: 'od_app_clarity:x:2069365905:'
+osconfig_etcgroup_regex: '^od_app_clarity'
+osconfig_etcgroup_line: 'od_app_clarity:x:2069365905:'
 ...

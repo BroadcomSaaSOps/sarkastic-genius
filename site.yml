@@ -11,17 +11,20 @@
       backup: yes
     register: result
 #    check_mode: yes
+
   - name: Get value from misconfigured servers
     shell: "grep '^clarity1' /etc/passwd"
     register: value
     always_run: yes
     ignore_errors: true
     changed_when: true == false
+
   - debug: var=value.stdout_lines
     when: result|changed
     changed_when: true == false
   tags:
     - passwd
+
 
 - hosts: sc5,mun,au1
   gather_facts: false
@@ -30,17 +33,20 @@
     lineinfile:
       #path: /etc/group
       dest: /etc/group
-      regexp: '^od_app_clarity'
-      line: '{{ osconfig_etcgroup_string }}'
+      regexp: '{{ osconfig_etcgroup_regex }}'
+      line: '{{ osconfig_etcgroup_line }}'
       backup: yes
     register: result
 #    check_mode: yes
+
   - name: Get value from misconfigured servers
-    shell: "grep od_app_clarity /etc/group"
+    shell: "grep {{ osconfig_etcgroup_line }} /etc/group"
     register: value
     always_run: yes
     ignore_errors: true
+    when: result|changed
     changed_when: true == false
+
   - debug: var=value.stdout_lines
     when: result|changed
     changed_when: true == false

@@ -19,4 +19,4 @@ retry.*
 ansible.log
 
 # Terraform state files
-terraform.tfstate
+*.tfstate

@@ -1,0 +1,55 @@
+---
+- hosts: sc5,mun,au1
+  gather_facts: false
+  tasks:
+  - name: Check /etc/passwd for clarity1
+    lineinfile:
+      #path: /etc/passwd
+      dest: /etc/passwd
+      regexp: '^clarity1'
+      line: 'clarity1:x:601:2069365905::/fs0/clarity1:/bin/bash'
+      backup: yes
+    register: result
+#    check_mode: yes
+  - name: Get value from misconfigured servers
+    shell: "grep '^clarity1' /etc/passwd"
+    register: value
+    always_run: yes
+    ignore_errors: true
+    changed_when: true == false
+  - debug: var=value.stdout_lines
+    when: result|changed
+    changed_when: true == false
+  tags:
+    - passwd
+
+- hosts: sc5,mun,au1
+  gather_facts: false
+  tasks:
+  - name: Check /etc/group for od_app_clarity
+    lineinfile:
+      #path: /etc/group
+      dest: /etc/group
+      regexp: '^od_app_clarity'
+      line: 'od_app_clarity:x:2069365905:'
+      backup: yes
+    register: result
+#    check_mode: yes
+  - name: Get value from misconfigured servers
+    shell: "grep od_app_clarity /etc/group"
+    register: value
+    always_run: yes
+    ignore_errors: true
+    changed_when: true == false
+  - debug: var=value.stdout_lines
+    when: result|changed
+    changed_when: true == false
+  tags:
+    - group
+...
+#  serial:
+#  - 1
+#  - 5
+#  - 10
+#  - 50
+#  - "100%"

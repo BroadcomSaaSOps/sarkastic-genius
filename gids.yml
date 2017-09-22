@@ -1,5 +1,5 @@
 ---
-- hosts: sc5,mun,au1
+- hosts: sc5,mun,au1,us5
   gather_facts: false
   tasks:
   - name: Check /etc/passwd for clarity1
@@ -26,7 +26,7 @@
     - passwd
 
 
-- hosts: sc5,mun,au1
+- hosts: sc5,mun,au1,us5
   gather_facts: false
   tasks:
   - name: Check /etc/group for od_app_clarity

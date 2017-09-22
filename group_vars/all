@@ -1,4 +1,5 @@
 ---
+# Ansible variables
 ansible_user: 'root'
 #ansible_ssh_pass: ''
 ...

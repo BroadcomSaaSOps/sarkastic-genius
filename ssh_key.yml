@@ -1,0 +1,26 @@
+---
+- hosts: sc5,mun,au1,us5
+  gather_facts: false
+  tasks:
+  - name: Ensure public key is in authorized keys
+    lineinfile:
+      path: {{ osconfig_ssh_key_rundeck_path }}
+      regexp: {{ osconfig_ssh_key_rundeck_regexp }}
+      line: {{ osconfig_ssh_key_rundeck }}
+      backup: yes
+    register: result
+
+  - name: Get value from misconfigured servers
+    shell: "grep '{{ osconfig_ssh_key_rundeck_regexp }}' {{ osconfig_ssh_key_rundeck_path }}"
+    register: value
+    check_mode: no
+    ignore_errors: true
+    changed_when: true == false
+
+  - debug: var=value.stdout_lines
+    when: result|changed
+    changed_when: true == false
+  tags:
+    - ssh_key_push
+
+...

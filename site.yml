@@ -4,8 +4,8 @@
   tasks:
   - name: Check /etc/passwd for clarity1
     lineinfile:
-      #path: /etc/passwd
-      dest: /etc/passwd
+      path: /etc/passwd
+      #dest: /etc/passwd  #Ansible <2.2
       regexp: '^clarity1'
       line: '{{ osconfig_etcpasswd_line }}'
       backup: yes
@@ -14,8 +14,8 @@
   - name: Get value from misconfigured servers
     shell: "grep '^clarity1' /etc/passwd"
     register: value
-    always_run: yes  # Ansible <2.2
-#    check_mode: no  # Ansible >=2.2
+    check_mode: no
+    #always_run: yes #Ansible <2.2
     ignore_errors: true
     changed_when: true == false
 
@@ -31,18 +31,19 @@
   tasks:
   - name: Check /etc/group for od_app_clarity
     lineinfile:
-      #path: /etc/group
-      dest: /etc/group
+      path: /etc/group
+      #dest: /etc/group  #Ansible <2.2
       regexp: '{{ osconfig_etcgroup_regex }}'
       line: '{{ osconfig_etcgroup_line }}'
       backup: yes
     register: result
-#    check_mode: yes
+#   #check_mode: yes
 
   - name: Get value from misconfigured servers
     shell: "grep {{ osconfig_etcgroup_line }} /etc/group"
     register: value
-    always_run: yes
+    check_mode: no
+#    always_run: yes #Ansible <2.2
     ignore_errors: true
     when: result|changed
     changed_when: true == false
@@ -53,9 +54,3 @@
   tags:
     - group
 ...
-#  serial:
-#  - 1
-#  - 5
-#  - 10
-#  - 50
-#  - "100%"

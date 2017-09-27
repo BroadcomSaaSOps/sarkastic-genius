@@ -8,17 +8,20 @@
       group: {{ osconfig_ssh_key_rundeck_group }}
       mode: 0600
       backup: yes
+    run_once: true
     register: result
 
-  - name: Get value from misconfigured servers
+  - name: Get value from misconfigured server(s)
     shell: "grep '{{ osconfig_ssh_key_rundeck_regexp }}' {{ osconfig_ssh_key_rundeck_path }}"
     register: value
     check_mode: no
     ignore_errors: true
+    run_once: true
     changed_when: true == false
     when: debug == true
 
   - debug: var=value.stdout_lines
+    run_once: true
     changed_when: true == false
     when: result|changed
 ...

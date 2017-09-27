@@ -3,7 +3,10 @@
     lineinfile:
       path: {{ osconfig_ssh_key_rundeck_path }}
       regexp: {{ osconfig_ssh_key_rundeck_regexp }}
-      line: {{ osconfig_ssh_key_rundeck }}
+      line: {{ osconfig_ssh_key_rundeck_line }}
+      owner: {{ osconfig_ssh_key_rundeck_owner }}
+      group: {{ osconfig_ssh_key_rundeck_group }}
+      mode: 0600
       backup: yes
     register: result
 

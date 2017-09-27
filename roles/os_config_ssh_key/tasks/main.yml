@@ -16,8 +16,9 @@
     check_mode: no
     ignore_errors: true
     changed_when: true == false
+    when: debug == true
 
   - debug: var=value.stdout_lines
-    when: result|changed
     changed_when: true == false
+    when: result|changed
 ...

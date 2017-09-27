@@ -1,13 +1,10 @@
 ---
-- hosts: sc5,mun,au1,us5
-  gather_facts: false
-  tasks:
   - name: Check /etc/passwd for clarity1
     lineinfile:
       path: /etc/passwd
       #dest: /etc/passwd  #Ansible <2.2
       regexp: '^clarity1'
-      line: '{{ osconfig_etcpasswd_line }}'
+      line: '{{ os_config_etcpasswd_line }}'
       backup: yes
     register: result
 
@@ -22,25 +19,19 @@
   - debug: var=value.stdout_lines
     when: result|changed
     changed_when: true == false
-  tags:
-    - passwd
 
-
-- hosts: sc5,mun,au1,us5
-  gather_facts: false
-  tasks:
-  - name: Check /etc/group for od_app_clarity
+  - name: Check /etc/group
     lineinfile:
       path: /etc/group
       #dest: /etc/group  #Ansible <2.2
-      regexp: '{{ osconfig_etcgroup_regex }}'
-      line: '{{ osconfig_etcgroup_line }}'
+      regexp: '{{ os_config_etcgroup_regex }}'
+      line: '{{ os_config_etcgroup_line }}'
       backup: yes
     register: result
 #   #check_mode: yes
 
   - name: Get value from misconfigured servers
-    shell: "grep {{ osconfig_etcgroup_line }} /etc/group"
+    shell: "grep {{ os_config_etcgroup_line }} /etc/group"
     register: value
     check_mode: no
 #    always_run: yes #Ansible <2.2
@@ -51,6 +42,4 @@
   - debug: var=value.stdout_lines
     when: result|changed
     changed_when: true == false
-  tags:
-    - group
 ...

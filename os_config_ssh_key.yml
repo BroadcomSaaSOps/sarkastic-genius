@@ -1,0 +1,8 @@
+---
+- hosts: us5
+  gather_facts: false
+  roles:
+    - os_config_ssh_key
+  tags:
+    - os_config_ssh_key
+...

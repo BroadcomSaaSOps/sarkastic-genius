@@ -1,27 +1,27 @@
 ---
   - name: Ensure public key is in authorized keys
     lineinfile:
-      path: {{ osconfig_ssh_key_rundeck_path }}
-      regexp: {{ osconfig_ssh_key_rundeck_regexp }}
-      line: {{ osconfig_ssh_key_rundeck_line }}
-      owner: {{ osconfig_ssh_key_rundeck_owner }}
-      group: {{ osconfig_ssh_key_rundeck_group }}
+      path: '{{ os_config_ssh_key_rundeck_path }}'
+      regexp: '{{ os_config_ssh_key_rundeck_regexp }}'
+      line: '{{ os_config_ssh_key_rundeck_line }}'
+      owner: '{{ os_config_ssh_key_rundeck_owner }}'
+      group: '{{ os_config_ssh_key_rundeck_group }}'
       mode: 0600
       backup: yes
-    run_once: true
+#    run_once: true
     register: result
 
   - name: Get value from misconfigured server(s)
-    shell: "grep '{{ osconfig_ssh_key_rundeck_regexp }}' {{ osconfig_ssh_key_rundeck_path }}"
+    shell: "grep '{{ os_config_ssh_key_rundeck_regexp }}' {{ osconfig_ssh_key_rundeck_path }}"
     register: value
     check_mode: no
     ignore_errors: true
-    run_once: true
+#    run_once: true
     changed_when: true == false
     when: debug == true
 
   - debug: var=value.stdout_lines
-    run_once: true
+#    run_once: true
     changed_when: true == false
     when: result|changed
 ...

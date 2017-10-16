@@ -1,0 +1,15 @@
+---
+- hosts: sc5,mun,au1
+  gather-facts: false
+  roles:
+    - os-config-etc-passwd
+  tags:
+    - os-config-etc-passwd
+
+- hosts: sc5,mun,au1
+  gather-facts: false
+  roles:
+    - os-config-etc-group
+  tags:
+    - os-config-etc-group
+...

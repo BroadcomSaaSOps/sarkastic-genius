@@ -1,0 +1,15 @@
+---
+- hosts: build
+  gather_facts: false
+  roles:
+    terraform
+  tags:
+    - tf-plan
+
+- hosts: build
+  gather_facts: false
+  roles:
+    terraform
+  tags:
+    - tf-apply
+...

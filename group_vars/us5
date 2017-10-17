@@ -1,14 +1,46 @@
 ---
-# Terraform variables
-tf_vsphere_user: "serviceaccount"
-tf_vsphere_password: "password"
-tf_vsphere_server: "us5npvc01"
-tf_vsphere_allow_unverified_ssl: "true"
-
 # SSH variables
 os_config_ssh_key_rundeck_path: '/fs0/clarity1/.ssh/authorized_keys'
 os_config_ssh_key_rundeck_regexp: 'rundeck@us5npapp292'
 os_config_ssh_key_rundeck_line: 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA4SOPyCBP6ikZnKRf6tCn6hEJkTfZpO7wW/VPZDQT50Lg2yFC4CXaj3NcIdNuWs7H0NIogss9/vxA3FqifuWeM6Gom9o9SxPpEegipaPhiPptP9n4v1264dsm6TL9qGdxf8KXBo9MPYH9G7qsy0FKU8MyJhwjrgThKP+Ay1qcchEo7x8/6NOLlHdbo6zKb7skS6JeQJe4G2pfaIu3jCP+jl03uFLhIc0e0Z8O5IpqjH9Gyvc7t3ac0wFGY0gkjrWvKGXvHq88dkxHnCxqEHhroEyR45WFlfPN1q9s6M2qQ/R8pHSCoAQ8hu/o4Cn9vUQ3ew1qXCJE3moGXjlRlM/7lw== rundeck@us5npapp292.casaasnp.com'
 os_config_ssh_key_rundeck_owner: 'clarity1'
 os_config_ssh_key_rundeck_group: 'od_app_clarity'
+...---
+# Terraform variables
+tf_vsphere_user: "serviceaccount"
+tf_vsphere_password: "password"
+tf_vsphere_server: "us5npvc01"
+tf_vsphere_allow_unverified_ssl: "true"
+
+tf_vsphere_datacenter: 'US5NP'
+tf_vsphere_cluster: 'HSA-CLARITY/APP-CLARITY-ORT-SI-02'
+tf_vsphere_resource_pool: 'Unclassified'
+tf_vsphere_vcpu: '1'
+tf_vsphere_memory: '2048'
+tf_vsphere_time_zone: 'US/Eastern'
+tf_vsphere_domain: 'ondemand.ca.com'
+tf_vsphere_dns_suffixes: 'ondemand.ca.com,casaasnp.com'
+tf_vsphere_dns_servers: '10.48.128.62","10.48.128.63'
+
+tf_vsphere_disk_datastore: 'CLARITY - SI - ORT/DCLUSTER_NTPA200_CLARITY/NTPA200_US5NPSVMFS01_DATASTORE_VMDSPPMVOL3'
+tf_vsphere_disk_template: 'Templates/US5NP_CENTOS72_GOLDEN_TEMPLATE'
+#tf_vsphere_disk_template: 'Templates/US5NP_RHEL72_GOLDEN_TEMPLATE'
+tf_vsphere_disk_type: 'thin'
+
+#tf_vsphere_net_eth0_label: 'dvSwitch7/APP-PUB'
+tf_vsphere_net_eth0_label: 'Standard Switches/APP-PUB'
+tf_vsphere_net_eth0_ipv4_address: '10.47.32.15'
+tf_vsphere_net_eth0_ipv4_prefix_length: '23'
+tf_vsphere_net_eth0_ipv4_gateway: ''
+
+#tf_vsphere_net_eth1_label: 'dvSwitch6/APP-MGMT'
+tf_vsphere_net_eth1_label: 'Standard Switches/APP-MGMT'
+tf_vsphere_net_eth1_ipv4_address: '10.47.34.15'
+tf_vsphere_net_eth1_ipv4_prefix_length: '23'
+tf_vsphere_net_eth1_ipv4_gateway: '10.242.35.196'
+
+tf_vsphere_net_eth2_label: 'NFS-FO-SAN'
+tf_vsphere_net_eth2_ipv4_address: '10.47.12.10'
+tf_vsphere_net_eth2_ipv4_prefix_length: '23'
+tf_vsphere_net_eth2_ipv4_gateway: ''
 ...

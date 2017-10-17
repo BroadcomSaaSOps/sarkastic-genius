@@ -14,9 +14,11 @@ Thumbs.db
 .Trashes
 .Trash
 
-# Ansible retry files
+# Ansible logs and retry files
 retry.*
-ansible.log
+ansible*.log
+log/*
 
 # Terraform state files
 *.tfstate
+.terraform

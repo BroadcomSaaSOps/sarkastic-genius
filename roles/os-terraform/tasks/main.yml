@@ -10,7 +10,7 @@
   with_items:
     - init
 #    - destroy -force
-    - plan -out ./log/terraform-plan-{{ lookup('pipe', 'date +%Y%m%d%H%M%S') }}
+    - plan -out=./log/terraform-plan-{{ lookup('pipe', 'date +%Y%m%d%H%M%S') }}
     - apply -state=./log/terraform.tfstate
   run_once: true
 #  register: result_terraform

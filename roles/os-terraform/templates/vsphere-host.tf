@@ -17,6 +17,7 @@ resource "vsphere_virtual_machine" "{{ inventory_hostname }}" {
     type = "{{ tf_vsphere_disk_type }}"
   }
 
+  {% if tf_vsphere_net_eth0_label is defined %}
   network_interface {
     label = "{{ tf_vsphere_net_eth0_label }}"
     ipv4_address = "{{ tf_vsphere_net_eth0_ipv4_address }}"
@@ -25,6 +26,7 @@ resource "vsphere_virtual_machine" "{{ inventory_hostname }}" {
     ipv4_gateway = "{{ tf_vsphere_net_eth0_ipv4_gateway }}"
     {% endif %}
   }
+  {% endif %}
 
   {% if tf_vsphere_net_eth1_label is defined %}
   network_interface {

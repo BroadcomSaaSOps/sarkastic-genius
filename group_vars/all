@@ -4,6 +4,7 @@ ansible_user: 'root'
 #ansible_ssh_pass: ''
 
 # Terraform Variables
+root_ssh_key: ''
 tf_provider: 'vsphere'
 tf_vsphere_user: "dummyuser"
 tf_vsphere_password: "dummypass"

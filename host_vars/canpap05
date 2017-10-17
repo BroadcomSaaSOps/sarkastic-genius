@@ -1,19 +1,19 @@
 ---
 # Terraform Variables
-#tf_vsphere_datacenter: "CaryDev"
-#tf_vsphere_cluster: "carpvm01"
-#tf_vsphere_resource_pool: "carpvm01/Unclassified"
-#tf_vsphere_vcpu: "1"
-#tf_vsphere_memory: "2048"
-#tf_vsphere_time_zone: "US/Eastern"
-#tf_vsphere_domain: "ca.com"
-#tf_vsphere_dns_suffixes: "ca.com"
-#tf_vsphere_dns_servers: "142.202.1.108"
-#tf_vsphere_disk_datastore: "CaryDev-AX4-FC/decom-AX4-FC01-VMFS5-2TB"
-#tf_vsphere_disk_template: "Veeam Jobs/Templates/Linux Images/Template-cent7-kinma13"
-#tf_vsphere_disk_type: "thin"
-#tf_vsphere_net_label: "CA_Internal_VL1402"
-tf_vsphere_net_ipv4_address: "10.242.7.202"
-#tf_vsphere_net_ipv4_prefix_length: "24"
-#tf_vsphere_net_ipv4_gateway: "10.242.7.1"
+#tf_vsphere_datacenter: 'CaryDev'
+#tf_vsphere_cluster: 'carpvm01'
+#tf_vsphere_resource_pool: 'carpvm01/Unclassified'
+#tf_vsphere_vcpu: '1'
+#tf_vsphere_memory: '2048'
+#tf_vsphere_time_zone: 'US/Eastern'
+#tf_vsphere_domain: 'ca.com'
+#tf_vsphere_dns_suffixes: 'ca.com'
+#tf_vsphere_dns_servers: '142.202.1.108'
+#tf_vsphere_disk_datastore: 'CaryDev-AX4-FC/decom-AX4-FC01-VMFS5-2TB'
+#tf_vsphere_disk_template: 'Veeam Jobs/Templates/Linux Images/Template-cent7-kinma13'
+#tf_vsphere_disk_type: 'thin'
+#tf_vsphere_net_eth0_label: 'CA_Internal_VL1402'
+tf_vsphere_net_eth0_ipv4_address: '10.242.7.202'
+#tf_vsphere_net_eth0_ipv4_prefix_length: '24'
+#tf_vsphere_net_eth0_ipv4_gateway: '10.242.7.1'
 ...

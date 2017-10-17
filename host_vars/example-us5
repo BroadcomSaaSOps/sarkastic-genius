@@ -17,18 +17,18 @@ tf_vsphere_disk_type: 'thin'
 
 tf_vsphere_net_eth0_label: 'Standard Switches/APP-PUB'
 #tf_vsphere_net_eth0_label: 'dvSwitch7/APP-PUB'
-tf_vsphere_net_eth0_ipv4_address: '10.47.32.15'
+tf_vsphere_net_eth0_ipv4_address: ''
 tf_vsphere_net_eth0_ipv4_prefix_length: '23'
 tf_vsphere_net_eth0_ipv4_gateway: ''
 
 tf_vsphere_net_eth1_label: 'Standard Switches/APP-MGMT'
 #tf_vsphere_net_eth1_label: 'dvSwitch6/APP-MGMT'
-tf_vsphere_net_eth1_ipv4_address: '10.47.34.15'
+tf_vsphere_net_eth1_ipv4_address: ''
 tf_vsphere_net_eth1_ipv4_prefix_length: '23'
 tf_vsphere_net_eth1_ipv4_gateway: '10.242.35.196'
 
 tf_vsphere_net_eth2_label: 'NFS-FO-SAN'
-tf_vsphere_net_eth2_ipv4_address: '10.47.12.10'
+tf_vsphere_net_eth2_ipv4_address: ''
 tf_vsphere_net_eth2_ipv4_prefix_length: '23'
 tf_vsphere_net_eth2_ipv4_gateway: ''
 ...

@@ -14,33 +14,21 @@ tf_vsphere_disk_datastore: 'CLARITY - SI - ORT/DCLUSTER_NTPA200_CLARITY/NTPA200_
 tf_vsphere_disk_template: 'Templates/US5NP_CENTOS72_GOLDEN_TEMPLATE'
 #tf_vsphere_disk_template: 'Templates/US5NP_RHEL72_GOLDEN_TEMPLATE'
 tf_vsphere_disk_type: 'thin'
-# NEED TO FIGURE OUT NFS IN TF OR IS IT AFTER DEPLOY?
-#        datastore = 'us5npfs03-nfs_fo-12.casaasnp.com:/vol/ort_code'  on /nfs/code
 
+tf_vsphere_net_eth0_label: 'Standard Switches/APP-PUB'
+#tf_vsphere_net_eth0_label: 'dvSwitch7/APP-PUB'
+tf_vsphere_net_eth0_ipv4_address: '10.47.32.15'
+tf_vsphere_net_eth0_ipv4_prefix_length: '23'
+#tf_vsphere_net_eth0_ipv4_gateway: ''
 
-tf_vsphere_net_label: 'Standard Switches/APP-PUB'
-#tf_vsphere_net_label: 'dvSwitch7/APP-PUB'
-tf_vsphere_net_ipv4_address: '10.47.32.15'
-tf_vsphere_net_ipv4_prefix_length: '23'
-#tf_vsphere_net_ipv4_gateway: ''
+tf_vsphere_net_eth1_label: 'Standard Switches/APP-MGMT'
+#tf_vsphere_net_eth1_label: 'dvSwitch6/APP-MGMT'
+tf_vsphere_net_eth1_ipv4_address: '10.47.34.15'
+tf_vsphere_net_eth1_ipv4_prefix_length: '23'
+tf_vsphere_net_eth1_ipv4_gateway: '10.242.35.196'
+
+tf_vsphere_net_eth2_label: 'NFS-FO-SAN'
+tf_vsphere_net_eth2_ipv4_address: '10.47.12.10'
+tf_vsphere_net_eth2_ipv4_prefix_length: '23'
+#tf_vsphere_net_eth2_ipv4_gateway: ''
 ...
-
-    network_interface {
-        label = 'Standard Switches/APP-PUB'
-        #label = 'dvSwitch7/APP-PUB'
-        ipv4_address = '10.47.32.15'
-        ipv4_prefix_length = '23'
-    }
-    network_interface {
-        label = 'Standard Switches/APP-MGMT'
-        #label = 'dvSwitch6/APP-MGMT'
-        ipv4_address = '10.47.34.15'
-        ipv4_prefix_length = '23'
-        ipv4_gateway = '10.242.35.196'
-    }
-    network_interface {
-        label = 'NFS-FO-SAN'
-        ipv4_address = '10.47.12.10'
-        ipv4_prefix_length = '23'
-    }
-}

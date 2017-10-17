@@ -1,0 +1,17 @@
+---
+- name: Create host Terraform File (.tf) from template
+  local_action: template src=templates/{{ tf_provider }}.tf dest=./log/host-{{ inventory_hostname }}.tf mode=0755
+
+- name: Run terraform
+  #local_action: command terraform {{ item }} {{ inventory_hostname }}
+  local_action: command terraform {{ item }} ./log/
+  with_items:
+    - init
+    - destroy -force
+    - plan -out ./log/terraform-plan-{{ lookup('pipe', 'date +%Y%m%d%H%M%S') }}
+    - apply
+   run_once: true
+#  register: result_terraform
+
+#- debug: var=result_terraform
+#  when: result_terraform|failed

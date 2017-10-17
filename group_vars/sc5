@@ -1,4 +1,11 @@
 ---
+# Terraform variables
+tf_vsphere_user: "serviceaccount"
+tf_vsphere_password: "password"
+tf_vsphere_server: "sc5vc01"
+tf_vsphere_allow_unverified_ssl: "true"
+
+# /etc/group and /etc/passwd vars
 os_config_etcpasswd_line: 'clarity1:x:601:2069365905::/fs0/clarity1:/bin/bash'
 os_config_etcgroup_regex: '^od_app_clarity'
 os_config_etcgroup_line: 'od_app_clarity:x:2069365905:'

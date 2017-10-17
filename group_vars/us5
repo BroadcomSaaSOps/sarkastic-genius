@@ -1,4 +1,10 @@
 ---
+# Terraform variables
+tf_vsphere_user: "serviceaccount"
+tf_vsphere_password: "password"
+tf_vsphere_server: "us5npvc01"
+tf_vsphere_allow_unverified_ssl: "true"
+
 # SSH variables
 os_config_ssh_key_rundeck_path: '/fs0/clarity1/.ssh/authorized_keys'
 os_config_ssh_key_rundeck_regexp: 'rundeck@us5npapp292'

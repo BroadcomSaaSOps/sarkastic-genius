@@ -1,15 +1,6 @@
 ---
-- hosts: build
+- hosts: all
   gather_facts: false
   roles:
-    terraform
-  tags:
-    - tf-plan
-
-- hosts: build
-  gather_facts: false
-  roles:
-    terraform
-  tags:
-    - tf-apply
+    - os-terraform
 ...

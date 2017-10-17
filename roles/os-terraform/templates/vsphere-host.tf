@@ -21,7 +21,35 @@ resource "vsphere_virtual_machine" "{{ inventory_hostname }}" {
     label = "{{ tf_vsphere_net_eth0_label }}"
     ipv4_address = "{{ tf_vsphere_net_eth0_ipv4_address }}"
     ipv4_prefix_length = "{{ tf_vsphere_net_eth0_ipv4_prefix_length }}"
+    {% if tf_vsphere_net_eth0_ipv4_gateway is defined %}
     ipv4_gateway = "{{ tf_vsphere_net_eth0_ipv4_gateway }}"
+    {% endif %}
   }
 
+  {% if tf_vsphere_net_eth1_label is defined %}
+  network_interface {
+    label = "{{ tf_vsphere_net_eth1_label }}"
+    ipv4_address = "{{ tf_vsphere_net_eth1_ipv4_address }}"
+    ipv4_prefix_length = "{{ tf_vsphere_net_eth1_ipv4_prefix_length }}"
+    {% if tf_vsphere_net_eth1_ipv4_gateway is defined %}
+    ipv4_gateway = "{{ tf_vsphere_net_eth1_ipv4_gateway }}"
+    {% endif %}
+  }
+  {% endif %}
+
+  {% if tf_vsphere_net_eth2_label is defined %}
+  network_interface {
+    label = "{{ tf_vsphere_net_eth2_label }}"
+    ipv4_address = "{{ tf_vsphere_net_eth2_ipv4_address }}"
+    ipv4_prefix_length = "{{ tf_vsphere_net_eth2_ipv4_prefix_length }}"
+    {% if tf_vsphere_net_eth2_ipv4_gateway is defined %}
+    ipv4_gateway = "{{ tf_vsphere_net_eth2_ipv4_gateway }}"
+    {% endif %}
+  }
+  {% endif %}
+
 }
+
+
+
+label = "{{ tf_vsphere_net_eth1_label }}"

@@ -6,7 +6,7 @@
   local_action: template src=templates/{{ tf_provider }}-host.tf dest=./log/host-{{ inventory_hostname }}.tf mode=0644
 
 - name: Run terraform
-  local_action: command terraform {{ item }} ./log/
+  local_action: command terraform {{ item }} -nocolor ./log/
   with_items:
     - init
 #    - destroy -force

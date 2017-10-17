@@ -18,10 +18,10 @@ resource "vsphere_virtual_machine" "{{ inventory_hostname }}" {
   }
 
   network_interface {
-    label = "{{ tf_vsphere_net_label }}"
-    ipv4_address = "{{ tf_vsphere_net_ipv4_address }}"
-    ipv4_prefix_length = "{{ tf_vsphere_net_ipv4_prefix_length }}"
-    ipv4_gateway = "{{ tf_vsphere_net_ipv4_gateway }}"
+    label = "{{ tf_vsphere_net_eth0_label }}"
+    ipv4_address = "{{ tf_vsphere_net_eth0_ipv4_address }}"
+    ipv4_prefix_length = "{{ tf_vsphere_net_eth0_ipv4_prefix_length }}"
+    ipv4_gateway = "{{ tf_vsphere_net_eth0_ipv4_gateway }}"
   }
 
 }

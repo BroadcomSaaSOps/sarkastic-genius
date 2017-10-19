@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: all,!blacklist,!decom
   gather_facts: false
   roles:
     - os-install

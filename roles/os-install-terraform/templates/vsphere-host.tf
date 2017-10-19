@@ -17,18 +17,18 @@ resource "vsphere_virtual_machine" "{{ inventory_hostname }}" {
     type = "{{ tf_vsphere_disk_type }}"
   }
 
-  {% if tf_vsphere_net_eth0_label is defined %}
+{% if tf_vsphere_net_eth0_label is defined %}
   network_interface {
     label = "{{ tf_vsphere_net_eth0_label }}"
     ipv4_address = "{{ tf_vsphere_net_eth0_ipv4_address }}"
     ipv4_prefix_length = "{{ tf_vsphere_net_eth0_ipv4_prefix_length }}"
-    {% if tf_vsphere_net_eth0_ipv4_gateway is defined %}
+{% if tf_vsphere_net_eth0_ipv4_gateway is defined %}
     ipv4_gateway = "{{ tf_vsphere_net_eth0_ipv4_gateway }}"
-    {% endif %}
+{% endif %}
   }
-  {% endif %}
+{% endif %}
 
-  {% if tf_vsphere_net_eth1_label is defined %}
+{% if tf_vsphere_net_eth1_label is defined %}
   network_interface {
     label = "{{ tf_vsphere_net_eth1_label }}"
     ipv4_address = "{{ tf_vsphere_net_eth1_ipv4_address }}"
@@ -51,7 +51,3 @@ resource "vsphere_virtual_machine" "{{ inventory_hostname }}" {
   {% endif %}
 
 }
-
-
-
-label = "{{ tf_vsphere_net_eth1_label }}"

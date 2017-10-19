@@ -1,0 +1,24 @@
+---
+- name: Create provider Terraform File (.tf) from template
+  local_action: template src=templates/{{ tf_provider }}-provider.tf dest=./log/os-install-terraform-provider-{{ tf_provider }}.tf mode=0644
+  run_once: true
+
+- name: Create host Terraform File (.tf) from template
+  local_action: template src=templates/{{ tf_provider }}-host.tf dest=./log/os-install-terraform-host-{{ inventory_hostname }}.tf mode=0644
+
+- name: Run terraform destroy (DON'T PANIC - Only when flagged)
+  local_action: command terraform {{ item }} -no-color ./log/
+  with_items:
+    - init
+    - destroy -force -state=./log/os-install-terraform.tfstate
+  run_once: true
+  when: os_install_terraform_destroy is defined
+
+- name: Run terraform apply
+  local_action: command terraform {{ item }} -no-color ./log/
+  with_items:
+    - init
+    - plan -out=./log/os-install-terraform-plan-{{ lookup('pipe', 'date +%Y%m%d%H%M%S') }}
+    - apply -state=./log/os-install-terraform.tfstate
+  run_once: true
+  when: os_install_terraform_build is defined

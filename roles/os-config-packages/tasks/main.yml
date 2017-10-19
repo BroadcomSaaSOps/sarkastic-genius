@@ -2,17 +2,14 @@
 - name: Install commonly used packages
   yum: name={{ item }} state=latest
   with_items:
-    - wget
-    - expect
-    - net-snmp-utils
     - bind-utils
-#    - telnet
     - dialog
+    - expect
     - htop
     - iftop
+    - net-snmp-utils
+#    - telnet
+    - vim
+    - wget
   register: result_yum
-
-- debug: var=result_yum
-  when: result_yum|failed
-
 # TERRAFORM https://releases.hashicorp.com/terraform/0.10.7/terraform_0.10.7_linux_amd64.zip

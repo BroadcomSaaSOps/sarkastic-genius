@@ -8,6 +8,7 @@
     - htop
     - iftop
     - net-snmp-utils
+    - python2-simplejson
 #    - telnet
     - vim
     - wget

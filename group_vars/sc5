@@ -1,34 +1,22 @@
 ---
-# /etc/group and /etc/passwd vars
-os_config_etcpasswd_line: 'clarity1:x:601:2069365905::/fs0/clarity1:/bin/bash'
-os_config_etcgroup_regex: '^od_app_clarity'
-os_config_etcgroup_line: 'od_app_clarity:x:2069365905:'
-
-# SSH variables
-os_config_ssh_key_rundeck_path: '/fs0/clarity1/.ssh/authorized_keys'
-os_config_ssh_key_rundeck_regexp: 'rundeck@us5npapp292'
-os_config_ssh_key_rundeck_line: 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA4SOPyCBP6ikZnKRf6tCn6hEJkTfZpO7wW/VPZDQT50Lg2yFC4CXaj3NcIdNuWs7H0NIogss9/vxA3FqifuWeM6Gom9o9SxPpEegipaPhiPptP9n4v1264dsm6TL9qGdxf8KXBo9MPYH9G7qsy0FKU8MyJhwjrgThKP+Ay1qcchEo7x8/6NOLlHdbo6zKb7skS6JeQJe4G2pfaIu3jCP+jl03uFLhIc0e0Z8O5IpqjH9Gyvc7t3ac0wFGY0gkjrWvKGXvHq88dkxHnCxqEHhroEyR45WFlfPN1q9s6M2qQ/R8pHSCoAQ8hu/o4Cn9vUQ3ew1qXCJE3moGXjlRlM/7lw== rundeck@us5npapp292.casaasnp.com'
-os_config_ssh_key_rundeck_owner: 'clarity1'
-os_config_ssh_key_rundeck_group: 'od_app_clarity'
-
 # Terraform variables
-tf_vsphere_user: "serviceaccount"
-tf_vsphere_password: "password"
+tf_vsphere_user: "svc-autom-vcenter@casaasops.com"
+tf_vsphere_password: "Ainte!!234n(_-_nadoyTTxESJeEEsAS%"
 tf_vsphere_server: "sc5odvc01"
 tf_vsphere_allow_unverified_ssl: "true"
 
 tf_vsphere_datacenter: 'SC5'
-tf_vsphere_cluster: 'SC5-HA-TODO-CLARITY'
-tf_vsphere_resource_pool: 'TODO'
+tf_vsphere_cluster: 'SC5-UCS2-HA-14-CLARITY'
+tf_vsphere_resource_pool: 'DSCLUSTER_HUS150_HA-14'
 tf_vsphere_vcpu: '2'
 tf_vsphere_memory: '12288'
-tf_vsphere_time_zone: 'US/Eastern'
+tf_vsphere_time_zone: 'US/Pacific'
 tf_vsphere_domain: 'ondemand.ca.com'
 tf_vsphere_dns_suffixes: 'casaasops.com ondemand.ca.com ca.com'
 tf_vsphere_dns_servers: '10.44.128.46","10.44.128.47'
 
-tf_vsphere_disk_datastore: 'DSCLUSTER_HUS150_HA-09'
-tf_vsphere_disk_template: 'Clarity-VMs/templates/SC5_Clarity15.2_20170817_New'
+tf_vsphere_disk_datastore: 'HUS150_3437_DATASTORE_2035'
+tf_vsphere_disk_template: 'Clarity-VMs/templates/SC5_Clarity15.2_OCT102017_NEW'
 tf_vsphere_disk_type: 'thin'
 
 tf_vsphere_net_eth0_label: 'APP-INT-NET'
@@ -44,4 +32,16 @@ tf_vsphere_net_eth1_ipv4_prefix_length: '23'
 tf_vsphere_net_eth2_label: 'FO-SAN'
 tf_vsphere_net_eth2_ipv4_address: '10.45.999.999'
 tf_vsphere_net_eth2_ipv4_prefix_length: '23'
+
+# /etc/group and /etc/passwd vars
+os_config_etcpasswd_line: 'clarity1:x:601:2069365905::/fs0/clarity1:/bin/bash'
+os_config_etcgroup_regex: '^od_app_clarity'
+os_config_etcgroup_line: 'od_app_clarity:x:2069365905:'
+
+# SSH variables
+os_config_ssh_key_rundeck_path: '/fs0/clarity1/.ssh/authorized_keys'
+os_config_ssh_key_rundeck_regexp: 'rundeck@us5npapp292'
+os_config_ssh_key_rundeck_line: 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA4SOPyCBP6ikZnKRf6tCn6hEJkTfZpO7wW/VPZDQT50Lg2yFC4CXaj3NcIdNuWs7H0NIogss9/vxA3FqifuWeM6Gom9o9SxPpEegipaPhiPptP9n4v1264dsm6TL9qGdxf8KXBo9MPYH9G7qsy0FKU8MyJhwjrgThKP+Ay1qcchEo7x8/6NOLlHdbo6zKb7skS6JeQJe4G2pfaIu3jCP+jl03uFLhIc0e0Z8O5IpqjH9Gyvc7t3ac0wFGY0gkjrWvKGXvHq88dkxHnCxqEHhroEyR45WFlfPN1q9s6M2qQ/R8pHSCoAQ8hu/o4Cn9vUQ3ew1qXCJE3moGXjlRlM/7lw== rundeck@us5npapp292.casaasnp.com'
+os_config_ssh_key_rundeck_owner: 'clarity1'
+os_config_ssh_key_rundeck_group: 'od_app_clarity'
 ...

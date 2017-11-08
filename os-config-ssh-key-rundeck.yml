@@ -1,5 +1,5 @@
 ---
-- hosts: us5
+- hosts: us5,sc5,mun,au1
   gather-facts: false
   roles:
     - os-config-ssh-key

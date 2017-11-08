@@ -1,7 +1,7 @@
 ---
 # Terraform variables
-tf_vsphere_user: "serviceaccount"
-tf_vsphere_password: "password"
+tf_vsphere_user: "svc-autom-vcenter@rwcats.com"
+tf_vsphere_password: "Ainte!!234n(_-_nadoyTTxESJeEEsAS%"
 tf_vsphere_server: "au1vc02"
 tf_vsphere_allow_unverified_ssl: "true"
 

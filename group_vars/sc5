@@ -7,7 +7,7 @@ tf_vsphere_allow_unverified_ssl: "true"
 
 tf_vsphere_datacenter: 'SC5'
 tf_vsphere_cluster: 'SC5-UCS2-HA-14-CLARITY'
-tf_vsphere_resource_pool: 'DSCLUSTER_HUS150_HA-14'
+#tf_vsphere_resource_pool: 'DSCLUSTER_HUS150_HA-14'
 tf_vsphere_vcpu: '2'
 tf_vsphere_memory: '12288'
 tf_vsphere_time_zone: 'US/Pacific'

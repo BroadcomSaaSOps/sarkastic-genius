@@ -10,6 +10,7 @@
     - net-snmp-utils
     - python2-simplejson
 #    - telnet
+    - unzip
     - vim
     - wget
   register: result_yum

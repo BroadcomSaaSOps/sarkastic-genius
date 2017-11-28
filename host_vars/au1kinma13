@@ -1,0 +1,13 @@
+---
+# Terraform Variables
+#tf_vsphere_cluster: ''
+#tf_vsphere_disk_datastore: ''
+#tf_vsphere_disk_template: ''
+
+tf_vsphere_net_eth0_ipv4_address: '10.11.32.55'
+
+tf_vsphere_net_eth1_ipv4_address: '10.11.35.36'
+tf_vsphere_net_eth1_ipv4_gateway: '10.11.34.1'
+
+tf_vsphere_net_eth2_ipv4_address: '10.11.13.5'
+...

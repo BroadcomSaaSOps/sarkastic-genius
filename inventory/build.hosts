@@ -1,6 +1,3 @@
-[build]
-localhost
-
 [us5]
 us5npkinma1301
 #us5npapp298
@@ -15,6 +12,8 @@ sc5kinma13
 demunkinma13
 
 [au1]
-au1kinma13[car]
+au1kinma13
+
+[car]
 canpap05
 canpap06

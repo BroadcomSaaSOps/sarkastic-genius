@@ -1,0 +1,22 @@
+---
+tf_provider: 'vsphere'
+tf_vsphere_user: 'dummyuser'
+tf_vsphere_password: 'dummypass'
+tf_vsphere_server: 'dummyserver'
+tf_vsphere_allow_unverified_ssl: 'true'
+tf_vsphere_datacenter: 'dummydatacenter'
+tf_vsphere_cluster: 'dummycluster'
+#tf_vsphere_resource_pool: 'Unclassified'
+
+tf_vsphere_vcpu: '1'
+tf_vsphere_memory: '2048'
+tf_vsphere_time_zone: 'US/Eastern'
+
+tf_vsphere_domain: 'ca.com'
+tf_vsphere_dns_suffixes: 'ca.com'
+tf_vsphere_dns_servers: '169.254.0.999'
+
+tf_vsphere_disk_datastore: 'dummydatastore'
+tf_vsphere_disk_template: 'dummytemplate'
+tf_vsphere_disk_type: 'thin'
+...

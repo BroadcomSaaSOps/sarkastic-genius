@@ -1,15 +1,15 @@
 ---
 # Terraform Variables
-tf_vsphere_net_eth0_label: '232-APP-EXT-NET'
+tf_vsphere_net_eth0_label: 'APP-INT-NET'
 tf_vsphere_net_eth0_ipv4_address: '10.45.132.56'
 tf_vsphere_net_eth0_ipv4_prefix_length: '23'
 
-tf_vsphere_net_eth1_label: '234-APP-MGT-NET'
+tf_vsphere_net_eth1_label: 'APP-MGT-NET'
 tf_vsphere_net_eth1_ipv4_address: '10.45.139.60'
 tf_vsphere_net_eth1_ipv4_prefix_length: '23'
-#tf_vsphere_net_eth1_ipv4_gateway: '10.45.139.1'
+tf_vsphere_net_eth1_ipv4_gateway: '10.45.138.1'
 
-tf_vsphere_net_eth2_label: '212-FO-SAN'
+tf_vsphere_net_eth2_label: 'FO-SAN'
 tf_vsphere_net_eth2_ipv4_address: '10.45.141.60'
 tf_vsphere_net_eth2_ipv4_prefix_length: '23'
 ...

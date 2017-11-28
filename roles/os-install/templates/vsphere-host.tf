@@ -2,7 +2,9 @@ resource "vsphere_virtual_machine" "{{ inventory_hostname }}" {
   name = "{{ inventory_hostname }}"
   datacenter = "{{ tf_vsphere_datacenter }}"
   cluster = "{{ tf_vsphere_cluster }}"
+{% if tf_vsphere_resource_pool is defined %}
   resource_pool = "{{ tf_vsphere_resource_pool }}"
+{% endif %}
   vcpu = "{{ tf_vsphere_vcpu }}"
   memory = "{{ tf_vsphere_memory }}"
 

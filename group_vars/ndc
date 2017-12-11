@@ -1,0 +1,27 @@
+---
+# Terraform Variables
+tf_vsphere_user: "vzb\service-jenkins"
+tf_vsphere_password: "C@rpacc10"
+tf_vsphere_server: "ndcpvc01"
+tf_vsphere_allow_unverified_ssl: "true"
+
+tf_vsphere_datacenter: "NDC"
+tf_vsphere_cluster: "ndcpvm02"
+tf_vsphere_resource_pool: "Unclassified"
+
+tf_vsphere_vcpu: "1"
+tf_vsphere_memory: "2048"
+tf_vsphere_time_zone: "Etc/UTC"
+tf_vsphere_domain: "vzb.verizon"
+tf_vsphere_dns_suffixes: "vzb.verizon vzbtest1.verizon ralvzb.verizon"
+tf_vsphere_dns_servers: '192.168.3.31","192.168.3.32'
+
+tf_vsphere_disk_datastore: "Prod-VNX5700-0370-decom/PROD-FC13-VMFS5-2TB-decom"
+tf_vsphere_disk_template: "/Templates/Linux/Template-rhel7-standard"
+tf_vsphere_disk_type: "thin"
+
+tf_vsphere_net_eth0_label: "Test_Management-VL901"
+tf_vsphere_net_eth0_ipv4_address: "65.246.124.999"
+tf_vsphere_net_eth0_ipv4_prefix_length: "24"
+tf_vsphere_net_eth0_ipv4_gateway: "65.246.124.254"
+...

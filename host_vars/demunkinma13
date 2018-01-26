@@ -1,0 +1,15 @@
+---
+# Terraform Variables
+tf_vsphere_net_eth0_label: 'Standard Switches/APP-PUB'
+tf_vsphere_net_eth0_ipv4_address: '10.47.32.15'
+tf_vsphere_net_eth0_ipv4_prefix_length: '23'
+
+tf_vsphere_net_eth1_label: 'Standard Switches/APP-MGMT'
+tf_vsphere_net_eth1_ipv4_address: '10.47.34.15'
+tf_vsphere_net_eth1_ipv4_prefix_length: '23'
+tf_vsphere_net_eth1_ipv4_gateway: '10.242.35.196'
+
+tf_vsphere_net_eth2_label: 'NFS-FO-SAN'
+tf_vsphere_net_eth2_ipv4_address: '10.47.12.10'
+tf_vsphere_net_eth2_ipv4_prefix_length: '23'
+...

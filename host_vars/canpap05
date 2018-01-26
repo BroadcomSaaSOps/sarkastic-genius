@@ -1,4 +1,0 @@
----
-# Terraform Variables
-tf_vsphere_net_eth0_ipv4_address: '10.242.7.202'
-...

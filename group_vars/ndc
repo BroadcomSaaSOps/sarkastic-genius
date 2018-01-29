@@ -1,6 +1,6 @@
 ---
 # Terraform Variables
-tf_vsphere_user: "vzb\service-jenkins"
+tf_vsphere_user: 'vzb\service-jenkins'
 tf_vsphere_password: "C@rpacc10"
 tf_vsphere_server: "ndcpvc01"
 tf_vsphere_allow_unverified_ssl: "true"

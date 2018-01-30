@@ -7,7 +7,7 @@ tf_vsphere_allow_unverified_ssl: "true"
 
 tf_vsphere_datacenter: 'US5NP'
 tf_vsphere_cluster: 'HSA-CLARITY/APP-CLARITY-ORT-SI-02'
-tf_vsphere_resource_pool: 'Unclassified'
+#tf_vsphere_resource_pool: ''
 tf_vsphere_vcpu: '1'
 tf_vsphere_memory: '2048'
 tf_vsphere_time_zone: 'US/Eastern'

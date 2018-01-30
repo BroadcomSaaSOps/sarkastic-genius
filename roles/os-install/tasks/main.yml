@@ -21,4 +21,4 @@
     - plan -out=./log/os-install-terraform-plan-{{ lookup('pipe', 'date +%Y%m%d%H%M%S') }}
     - apply -state=./log/os-install-terraform.tfstate -auto-approve
   run_once: true
-  when: os_install_terraform_build is defined
+  when: os_install_terraform_build is undefined

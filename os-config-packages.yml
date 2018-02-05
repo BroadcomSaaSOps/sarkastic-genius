@@ -3,7 +3,7 @@
 #  remote_user: root
   become: true
   roles:
-    - os-packages
+    - os-config-packages
 #  any_errors_fatal: true
 #  tags:
 #    os_config

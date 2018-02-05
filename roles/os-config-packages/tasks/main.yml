@@ -5,11 +5,11 @@
     - bind-utils
     - dialog
     - expect
-    - htop
-    - iftop
+#    - htop # In a non-default repo
+#    - iftop # In a non-default repo
     - net-snmp-utils
-    - python2-simplejson
-#    - telnet
+#    - python2-simplejson # In a non-default repo
+#    - telnet # Great for troubleshooting but CIS audits get angry
     - unzip
     - vim
     - wget

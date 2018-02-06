@@ -21,5 +21,7 @@ Q: What's up with the name?
 A: I'm not fantastic at naming things so I used a wu-tang name generator. The misspelling of "sarcastic" came from the generator which I liked because it is meta. Despite, or maybe even because of the typo, the name is something more memorable and less sterile than "infrastructure-ansible-automation" or similar.
 
 
-## More
-1) https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+## Helpful resources
+1) https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet - Howto compose README.md files
+2) https://rogerdudler.github.io/git-guide/ - How to use git
+3) http://docs.ansible.com/ansible/latest/playbooks_variables.html - Understanding Ansible variables

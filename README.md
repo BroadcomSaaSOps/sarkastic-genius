@@ -4,12 +4,13 @@ Matt.King@ca.com
 
 
 ## Usage
-ansible-playbook -i inventory/[env].hosts [playbook.yml] --check --extra-vars="var1=foo,var2=bar" --ask-pass
+ansible-playbook -i inventory/[env].hosts [playbook.yml] --check --extra-vars="var1=foo var2=bar" --ask-pass
 
 where
 - [env] = 3-letter environment code (au1, mun, sc5, us5, etc.)
 - [playbook.yml] = filename of playbook you wish to run (os-install.yml)
-- [extra-vars] = dependent on playbook, (os_install_terraform_destroy=true, os_install_terraform_build=false)
+- [extra-vars] = dependent on playbook, os-install uses "os_install_terraform_destroy=true os_install_terraform_build=false"  
+  * Note --extra-vars accepts a space-delimited list encased in quotes.
 - --ask-pass = Depending on what you're trying to accomplish, you may need to run the playbook as your user but become root
 ex: ansible-playbook -i inventory/car-build.hosts os-install.yml --tags="os_install_terraform_build"
 

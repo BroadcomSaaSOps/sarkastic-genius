@@ -1,0 +1,6 @@
+---
+- hosts: all
+  gather-facts: false
+  roles:
+    - os-validate-java
+...

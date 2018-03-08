@@ -1,0 +1,11 @@
+---
+  - name: Check for the existence of /opt/CA/Cohesion/Agent/jre/bin/java
+    file:
+      path: /opt/CA/Cohesion/Agent/jre/bin/java
+      state: absent
+    register: result
+    check_mode: yes
+
+  - debug: var=result.stdout_lines
+    when: result|changed
+...

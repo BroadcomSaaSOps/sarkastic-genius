@@ -3,9 +3,9 @@
     file:
       path: /opt/CA/Cohesion/Agent/jre/bin/java
       state: absent
-    register: result
+#    register: result
     check_mode: yes
 
-  - debug: var=result.stdout_lines
-    when: result|changed
+#  - debug: var=result.stdout_lines
+#    when: result|changed
 ...

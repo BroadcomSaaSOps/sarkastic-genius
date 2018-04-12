@@ -1,0 +1,6 @@
+# os_config - Configure the OS for the applications
+- hosts: all,!build
+  remote_user: root
+  become: true
+  roles:
+    - os-config-timezone

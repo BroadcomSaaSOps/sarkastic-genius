@@ -1,0 +1,9 @@
+---
+- name: Symlink /etc/localtime to the appropriate timezone
+  file:
+    src: "{{ etc_localtime }}"
+    dest: /etc/localtime
+    state: link
+    owner: root
+    group: root
+...

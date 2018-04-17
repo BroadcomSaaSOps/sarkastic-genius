@@ -1,0 +1,10 @@
+---
+  - name: Ensure we have an Ansible compatible init script (/etc/init.d/nimbus) for the uim probe
+    copy:
+      src: nimbus_status.sh
+      dest: /etc/init.d/nimbus
+      mode: 0700
+      owner: root
+      group: root
+      backup: yes
+...

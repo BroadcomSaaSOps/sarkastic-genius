@@ -1,0 +1,14 @@
+code_old -fstype=nfs,tcp,hard,intr,nodev,nosuid sc5odfs02-nfs_fo-130.casaasops.com:/vol/c12_stable
+share -fstype=nfs,tcp,hard,intr,nodev,nosuid sc5odfs01-nfs_fo-130.casaasops.com:/vol/Infra_tools_sc5
+t1share01 -fstype=nfs,hard,intr,nodev,nosuid sc5odfs02-nfs_fo-130.casaasops.com:/vol/t1share01
+sftpvol01 -fstype=nfs,tcp,hard,intr,nodev,nosuid sc5odfs01-nfs_fo-130.casaasops.com:/vol/sftpvol01
+scratch -fstype=nfs,tcp,hard,intr,nodev,nosuid sc5odfs02-nfs_fo-130.casaasops.com:/vol/Infra_tools_scratch
+filestore -fstype=nfs,tcp,hard,intr,nodev,nosuid sc5odfs01-nfs_fo-130.casaasops.com:/vol/clrt_prod1/c12_fs
+searchindex -fstype=nfs,tcp,hard,intr,nodev,nosuid sc5odfs01-nfs_fo-130.casaasops.com:/vol/clrt_prod1/c12_index
+reporting -fstype=nfs,tcp,hard,intr,nodev,nosuid sc5odfs01-nfs_fo-130.casaasops.com:/vol/clrt_prod1/c12_report
+custom -fstype=nfs,tcp,hard,intr,nodev,nosuid sc5odfs01-nfs_fo-130.casaasops.com:/vol/clrt_prod1/c12_cust
+fsvol06 -fstype=nfs,tcp,hard,intr,nodev,nosuid sc5odfs02-nfs_fo-130.casaasops.com:/vol/clrt_prod2/fsvol06
+logs -fstype=nfs,tcp,hard,intr,nodev,nosuid sc5odfs02-nfs_fo-130.casaasops.com:/vol/clrt_prod2/c12_log
+code -fstype=nfs,tcp,hard,intr,nodev,nosuid sc5odfs02-nfs_fo-130.casaasops.com:/vol/clrt_prod2/c12_code
+backup -fstype=nfs,tcp,hard,intr,nodev,nosuid sc5odfs02-nfs_fo-130.casaasops.com:/vol/clrt_prod2/c12_backup
+

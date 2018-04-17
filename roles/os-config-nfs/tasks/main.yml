@@ -1,0 +1,12 @@
+---
+- name: Copy /etc/auto.nfs configuration file
+  copy:
+    src: "auto.{{ flag_nfs }}"
+    dest: "/etc/auto.nfs"
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+#  register: result
+#  when: result|failed or result|changed
+...

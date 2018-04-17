@@ -1,0 +1,38 @@
+---
+# Ensure we have an Ansible compatible init script (/etc/init.d/nimbus) for the uim probe
+- hosts: all
+  roles:
+    - app-uimprobe-initscript
+  tags:
+    - install
+#    - always
+
+# These 3 plays stop, start, and restart the uim probe service (/etc/init.d/nimbus)
+# https://support.ca.com/us/knowledge-base-articles.TEC000003743.html
+- hosts: all
+  tasks:
+  - name: stop uim probe
+    service:
+      name: nimbus
+      state: stopped
+  tags:
+    - stop
+
+- hosts: all
+  tasks:
+  - name: start uim probe
+    service:
+      name: nimbus
+      state: started
+  tags:
+    - start
+
+- hosts: all
+  tasks:
+  - name: restart uim probe
+    service:
+      name: nimbus
+      state: restarted
+  tags:
+    - restart
+...

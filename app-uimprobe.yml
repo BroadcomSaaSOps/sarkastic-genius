@@ -1,4 +1,8 @@
 ---
+# Usage Examples:
+# ansible-playbook -i path/to/inventory app-uimprobe.yml --tags="install,start"
+# ansible-playbook -i path/to/inventory app-uimprobe.yml --tags="restart"
+# ansible-playbook -i path/to/inventory app-uimprobe.yml --tags="install,start,stop,restart"
 # Ensure we have an Ansible compatible init script (/etc/init.d/nimbus) for the uim probe
 - hosts: all
   roles:

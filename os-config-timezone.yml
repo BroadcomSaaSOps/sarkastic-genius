@@ -1,6 +1,8 @@
-# os_config - Configure the OS for the applications
+---
+# os_config_timezone - Configure the timezone on the local machine (because PPM does not support this yet).
 - hosts: all,!build
-  remote_user: root
-  become: true
+#  remote_user: root
+#  become: true
   roles:
     - os-config-timezone
+...

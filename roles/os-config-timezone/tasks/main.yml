@@ -1,7 +1,11 @@
 ---
+# Ask user to supply a value for the timezone and set that value to flag_timezone via
+#   --extra-vars "flag_timezone=/usr/share/zoneinfo/America/New_York"
+# Default: /usr/share/zoneinfo/America/Los_Angeles set in ansible/roles/os-config-timezone/defaults
+# And further able to be overridden by ansible/group_vars/all,sc5,etc.
 - name: Symlink /etc/localtime to the appropriate timezone
   file:
-    src: "{{ etc_localtime }}"
+    src: "{{ flag_timezone }}"
     dest: /etc/localtime
     state: link
     owner: root

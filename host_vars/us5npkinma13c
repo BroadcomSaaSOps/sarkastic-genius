@@ -1,0 +1,30 @@
+---
+# Terraform Variables
+#tf_vsphere_datacenter: 'US5NP'
+#tf_vsphere_cluster: 'HSA-CLARITY/APP-CLARITY-ORT-SI-02'
+#tf_vsphere_resource_pool: ''
+#tf_vsphere_vcpu: '1'
+#tf_vsphere_memory: '2048'
+#tf_vsphere_time_zone: 'US/Eastern'
+#tf_vsphere_domain: 'ondemand.ca.com'
+#tf_vsphere_dns_suffixes: 'ondemand.ca.com,casaasnp.com'
+#tf_vsphere_dns_servers: '10.48.128.62","10.48.128.63'
+
+#tf_vsphere_disk_datastore: 'CLARITY - SI - ORT/DCLUSTER_NTPA200_CLARITY/NTPA200_US5NPSVMFS01_DATASTORE_VMDSPPMVOL3'
+#tf_vsphere_disk_template: 'Templates/US5NP_CENTOS72_GOLDEN_TEMPLATE'
+#tf_vsphere_disk_template: 'Templates/US5NP_RHEL72_GOLDEN_TEMPLATE'
+#tf_vsphere_disk_type: 'thin'
+
+tf_vsphere_net_eth0_label: 'Standard Switches/APP-PUB'
+tf_vsphere_net_eth0_ipv4_address: '10.47.32.17'
+tf_vsphere_net_eth0_ipv4_prefix_length: '23'
+
+tf_vsphere_net_eth1_label: 'Standard Switches/APP-MGMT'
+tf_vsphere_net_eth1_ipv4_address: '10.47.34.7'
+tf_vsphere_net_eth1_ipv4_prefix_length: '23'
+tf_vsphere_net_eth1_ipv4_gateway: '10.242.35.196'
+
+tf_vsphere_net_eth2_label: 'NFS-FO-SAN'
+tf_vsphere_net_eth2_ipv4_address: '10.47.12.45'
+tf_vsphere_net_eth2_ipv4_prefix_length: '23'
+...

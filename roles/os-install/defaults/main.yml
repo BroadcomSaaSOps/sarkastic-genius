@@ -6,6 +6,7 @@ tf_vsphere_server: 'dummyserver'
 tf_vsphere_allow_unverified_ssl: 'true'
 tf_vsphere_datacenter: 'dummydatacenter'
 tf_vsphere_cluster: 'dummycluster'
+tf_vsphere_datastore_cluster: 'dummydatastorecluster'
 #tf_vsphere_resource_pool: 'Unclassified'
 
 tf_vsphere_vcpu: '1'

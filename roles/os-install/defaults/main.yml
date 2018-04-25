@@ -20,4 +20,7 @@ tf_vsphere_dns_servers: '169.254.0.999'
 tf_vsphere_disk_datastore: 'dummydatastore'
 tf_vsphere_disk_template: 'dummytemplate'
 tf_vsphere_disk_type: 'thin'
+
+os_install_terraform_destroy: false
+os_install_terraform_build: true
 ...

@@ -12,7 +12,7 @@
     - init
     - destroy -force -state=./log/os-install-terraform.tfstate
   run_once: true
-  when: os_install_terraform_destroy is defined
+  when: os_install_terraform_destroy is true
 
 - name: Run terraform apply
   local_action: command terraform {{ item }} -no-color ./log/
@@ -21,4 +21,4 @@
     - plan -out=./log/os-install-terraform-plan-{{ lookup('pipe', 'date +%Y%m%d%H%M%S') }}
     - apply -state=./log/os-install-terraform.tfstate -auto-approve
   run_once: true
-  when: os_install_terraform_build is undefined
+  when: os_install_terraform_build is true

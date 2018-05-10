@@ -1,0 +1,6 @@
+---
+# os_config_memory - Configure the amount of RAM provided to the vm_guest
+- hosts: all
+  roles:
+    - os-config-memory
+...

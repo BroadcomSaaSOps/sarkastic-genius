@@ -44,7 +44,11 @@ To provision new servers using this automation, perform the following steps:
 1) Running from a shared directory means that the Terraform state files remain after execution in the /log/ dir. This can lead to servers getting destroyed and rebuilt on next execution.  
 Ensure the /log/ dir contains nothing other than a README file and the ansible.log or servers may be accidentally destroyed and rebuilt!
 2) You can use the existing inventory files and pass a --limit='newbuild01,newbuild02"
-3) There may be file permissions issues with the /log/ dir, a consequence of using a shared ansible directory rather than a unique workspace every execution. To avoid this, you may check out the code in your homedir and run from there.
+3) There may be file permissions issues with the /log/ dir, a consequence of using a shared ansible directory rather than a unique workspace every execution. To avoid this, you may check out the code in your homedir and run from there.  
+
+* Recording
+A demo of this provisioning can be found here:  
+https://catechnologies.webex.com/catechnologies/lsr.php?RCID=822589bdb21948e88acb8e9df9e92772
 
 
 ## FAQ

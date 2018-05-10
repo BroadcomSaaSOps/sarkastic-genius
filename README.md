@@ -21,17 +21,23 @@ ex: ansible-playbook -i inventory/car-build.hosts os-install.yml
 ## Provisioning
 To provision new servers using this automation, perform the following steps:
 1) ssh to the environment's respective Ansible server (us5npopsansi01,sc5opsansi01,demunopsansi01,au1opsansi01,ndcpans01,etc.)
-   ssh us5npopsansi01
-3) Change directory to the playbook
-   cd /usr/share/ansible/sarkastic-genius
-4) Create an inventory (Reference examples in the 'inventory' dir)
-   cat inventory/us5.hosts
+-   ssh us5npopsansi01
+
+2) Change directory to the playbook
+-  cd /usr/share/ansible/sarkastic-genius
+
+3) Create an inventory 
+   (Reference examples in the 'inventory' dir)
+-   cat inventory/us5.hosts
    [us5]
    us5npnewbuild1
    us5npnewbuild2
    ...
-5) Create a host_vars file named after each server you want to build (Reference examples in the 'host_vars' dir)
-6) Run the Ansible playbook
+4) Create a host_vars file named after each server you want to build 
+   (Reference examples in the 'host_vars' dir)
+
+
+5) Run the Ansible playbook
    ansible-playbook -i path/to/inventory os-install.yml
 
 * Notes:

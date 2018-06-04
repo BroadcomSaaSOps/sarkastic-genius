@@ -28,13 +28,13 @@ To provision new servers using this automation, perform the following steps:
 
 3) Create an inventory  
    (Reference examples in the 'inventory' dir)
--   cat inventory/us5.hosts
-   [us5]
-   us5npnewbuild1
-   us5npnewbuild2
+-   cat inventory/us5.hosts  
+     [us5]  
+     us5npnewbuild1  
+     us5npnewbuild2  
    ...
 4) Create a host_vars file named after each server you want to build  
-   (Reference examples in the 'host_vars' dir)
+   (Reference examples in the 'host_vars' and 'group_vars' dir)  
 
 
 5) Run the Ansible playbook  

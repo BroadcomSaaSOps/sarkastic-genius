@@ -49,12 +49,6 @@ Ensure the /log/ dir contains nothing other than a README file and the ansible.l
 https://catechnologies.webex.com/catechnologies/lsr.php?RCID=822589bdb21948e88acb8e9df9e92772
 
 
-## FAQ
-Q: What's up with the name?
-
-A: I'm not fantastic at naming things so I used a wu-tang name generator. The misspelling of "sarcastic" came from the generator which I liked because it is meta. Despite, or maybe even because of the typo, the name is something more memorable and less sterile than "infrastructure-ansible-automation" or similar.
-
-
 ## Helpful resources
 1) https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet - Howto compose README.md files
 2) https://rogerdudler.github.io/git-guide/ - How to use git

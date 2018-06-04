@@ -33,13 +33,14 @@ To provision new servers using this automation, perform the following steps:
      us5npnewbuild1  
      us5npnewbuild2  
    ...
-4) Create a host_vars file named after each server you want to build  
+4) Create a host_vars named after each server you want to build  
    (Reference examples in the 'host_vars' and 'group_vars' dir)  
-
-
+   /usr/share/ansible/sarkastic-genius/host_vars/mynewservername01  
+   /usr/share/ansible/sarkastic-genius/host_vars/mynewservername02  
+  
 5) Run the Ansible playbook  
    ansible-playbook -i path/to/inventory os-install.yml
-
+  
 * Notes:  
 1) Running from a shared directory means that the Terraform state files remain after execution in the /log/ dir. This can lead to servers getting destroyed and rebuilt on next execution.  
 Ensure the /log/ dir contains nothing other than a README file and the ansible.log or servers may be accidentally destroyed and rebuilt!
